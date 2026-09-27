@@ -10,19 +10,19 @@ int main()
 {
     int character;
 
-    while ((character = getchar()) != EOF)  {
-        if (character == '\t')  {
+    while ((character = getchar()) != EOF) {
+        if (character == '\t') {
             printf("\\t");
         }
-        if (character == '\b')  {
+        if (character == '\b') {
             printf("\\b");
         }
-        if (character == '\\')  {
+        if (character == '\\') {
             printf("\\\\");
         }
-        if (character != '\t')  {
-            if (character != '\b')  {
-                if (character != '\\')  {
+        if (character != '\t') {
+            if (character != '\b') {
+                if (character != '\\') {
                     putchar(character);
                 }
             }

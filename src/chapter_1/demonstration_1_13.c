@@ -7,23 +7,23 @@ int main()
 
     nwhite = nother = 0;
 
-    for (index = 0; index < 10; ++index)    {
+    for (index = 0; index < 10; ++index) {
         ndigit[index] = 0;
     }
 
     while ((character = getchar()) != EOF)  {
-        if (character >= '0' && character <= '9')   {
+        if (character >= '0' && character <= '9') {
             ++ndigit[character - '0'];
-        }   else if (character == ' ' || character == '\n' || character == '\t')    {
+        } else if (character == ' ' || character == '\n' || character == '\t') {
             ++nwhite;
-        }   else    {
+        } else {
             ++nother;
         }
     }
 
     printf("Digits =");
 
-    for (index = 0; index < 10; ++index)    {
+    for (index = 0; index < 10; ++index) {
         printf(" %d", ndigit[index]);
     }
 

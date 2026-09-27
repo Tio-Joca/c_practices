@@ -14,30 +14,30 @@ int main()
 
     word_length = 0;
 
-    for (index = 0; index < HISTOGRAM_LENGTH; ++index)   {
+    for (index = 0; index < HISTOGRAM_LENGTH; ++index) {
         histogram[index] = 0;
     }
 
-    while ((character = getchar()) != EOF)  {
+    while ((character = getchar()) != EOF) {
         if (character == ' ' || character == '\n' || character == '\t') {
-            if (word_length > 0)    {
+            if (word_length > 0) {
                 if (word_length > HISTOGRAM_LENGTH) {
                     ++histogram[HISTOGRAM_LENGTH - 1];
-                }   else    {
+                } else {
                     ++histogram[--word_length];
                 }
                 word_length = 0;
             }
-        }   else    {
+        } else {
             ++word_length;
         }
     }
 
     printf("Horizontal histogram of the length of words provided by input\n");
 
-    for (index = 0; index < HISTOGRAM_LENGTH; ++index)   {
+    for (index = 0; index < HISTOGRAM_LENGTH; ++index) {
         printf("%3d ", (index + 1));
-        for (counter = 1; counter <= histogram[index]; ++counter)   {
+        for (counter = 1; counter <= histogram[index]; ++counter) {
             putchar('*');
         }
         putchar('\n');
@@ -47,21 +47,21 @@ int main()
 
     y_axis = 0;
 
-    for (index = 0; index < HISTOGRAM_LENGTH; ++index)   {
-        if (histogram[index] > y_axis)   {
+    for (index = 0; index < HISTOGRAM_LENGTH; ++index) {
+        if (histogram[index] > y_axis) {
             y_axis = histogram[index];
         }
     }
 
-    while (y_axis >= 0)  {
-        for (index = 0; index < HISTOGRAM_LENGTH; ++index)   {
+    while (y_axis >= 0) {
+        for (index = 0; index < HISTOGRAM_LENGTH; ++index) {
             if (y_axis > 0) {
                 if (histogram[index] >= y_axis) {
                     printf("%2c ", '*');
-                }   else    {
+                } else {
                     printf("%2c ", ' ');
                 }
-            }   else {
+            } else {
                 printf("%2d ", (index + 1));
             }
         }

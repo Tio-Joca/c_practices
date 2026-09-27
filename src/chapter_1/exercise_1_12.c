@@ -13,18 +13,18 @@ int main()
 
     state = OUT;
 
-    while ((character = getchar()) != EOF)  {
+    while ((character = getchar()) != EOF) {
         if (character == ' ' || character == '\n' || character == '\t') {
-            if (state == IN)  {
+            if (state == IN) {
                 putchar('\n');
                 state = OUT;
             }
         }
-        else if (state == OUT)  {
+        else if (state == OUT) {
             state = IN;
         }
 
-        if (state == IN)    {
+        if (state == IN) {
             putchar(character);
         }
     }

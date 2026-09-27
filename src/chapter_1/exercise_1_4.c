@@ -15,7 +15,7 @@ int main()
 
     celsius = 0;
 
-    while (celsius <= 300)  {
+    while (celsius <= 300) {
         fahrenheit = 9 * celsius / 5.0 + 32;
         printf("%7d   %10f\n", celsius, fahrenheit);
         celsius = celsius + 20;

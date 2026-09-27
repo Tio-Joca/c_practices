@@ -11,16 +11,16 @@ int main()
 
     blanks = tabs = newlines = 0;
 
-    while ((character = getchar()) != EOF)  {
-        if (character == ' ')   {
+    while ((character = getchar()) != EOF) {
+        if (character == ' ') {
             ++blanks;
         }
 
-        if (character == '\t')  {
+        if (character == '\t') {
             ++tabs;
         }
 
-        if (character == '\n')  {
+        if (character == '\n') {
             ++newlines;
         }
     }
